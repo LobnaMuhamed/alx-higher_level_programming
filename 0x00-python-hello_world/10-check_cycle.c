@@ -7,11 +7,10 @@
 */
 int check_cycle(listint_t *list)
 {
-	listint_t *temp, *current;
+	listint_t *temp = list, *current;
 
-	if (!list || !temp)
+	if (!list || !temp->next)
 		return (0);
-	temp = list->next;
 	current = list->next;
 
 	while (temp && current && current->next)
