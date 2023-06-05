@@ -9,11 +9,11 @@ int check_cycle(listint_t *list)
 {
 	listint_t *temp, *current;
 
-	temp = list->next;
-	current = temp->next;
-
 	if (!list || !temp)
 		return (0);
+	temp = list->next;
+	current = list->next;
+
 	while (temp && current && current->next)
 	{
 		if (temp == current)
