@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 import sys
-len_arg = len(sys.argv) - 1
 if __name__ == "__main__":
+    len_arg = len(sys.argv) - 1
     if len_arg == 0:
-        print("0 argument.")
+        print("0 arguments.")
     elif len_arg == 1:
         print("1 argument:")
     else:
