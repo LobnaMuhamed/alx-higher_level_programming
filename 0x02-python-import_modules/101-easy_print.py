@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-__import__('bultins').print("#pythoniscool")
+__import__('builtins').print("#pythoniscool")
