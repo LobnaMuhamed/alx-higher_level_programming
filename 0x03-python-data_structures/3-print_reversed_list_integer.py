@@ -10,4 +10,4 @@ def print_reversed_list_integer(my_list=[]):
     """
     len_list = len(my_list) - 1
     for i in range(len_list, -1, -1):
-        print(my_list[i])
+        print("{}".format(my_list[i]))
