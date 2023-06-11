@@ -9,5 +9,5 @@ def multiple_returns(sentence):
     """
     len_str = len(sentence)
     if len_str == 0:
-        sentence[0] = None
+        return((0, None))
     return((len_str, sentence[0]))
