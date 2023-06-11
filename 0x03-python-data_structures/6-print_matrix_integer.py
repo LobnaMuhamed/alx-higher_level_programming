@@ -8,7 +8,7 @@ def print_matrix_integer(matrix=[[]]):
     matrix: a input matrix of integers
     """
     if (len(matrix) - 1) == 0:
-        print("")
+        print()
         exit()
     else:
         for row in matrix:
