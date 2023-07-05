@@ -6,6 +6,9 @@ class Rectangle:
     """ A class variable, counting number of instance"""
     number_of_instances = 0
 
+    """ A public class attribute for print symbol """
+    print_symbol = '#'
+
     """ Intialize Rectangle class """
 
     def __init__(self, width=0, height=0):
@@ -63,9 +66,9 @@ class Rectangle:
         result = ''
         for i in range(self.__height):
             if i == (self.__height - 1):
-                result += '#' * self.__width
+                result += str(self.print_symbol) * self.__width
             else:
-                result += '#' * self.__width + '\n'
+                result += str(self.print_symbol) * self.__width + '\n'
         return result
     """ function return a string representation of rectangle """
 
