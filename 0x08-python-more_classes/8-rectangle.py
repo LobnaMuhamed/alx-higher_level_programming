@@ -70,6 +70,7 @@ class Rectangle:
                 result += str(self.print_symbol) * self.__width
             else:
                 result += str(self.print_symbol) * self.__width + '\n'
+        return result
     """ function return a string representation of rectangle """
 
     def __repr__(self):
