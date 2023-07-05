@@ -3,12 +3,15 @@
 
 
 class Rectangle:
+    """ A class variable, counting number of instance"""
+    number_of_instances = 0
 
     """ Intialize Rectangle class """
 
     def __init__(self, width=0, height=0):
         self.height = height
         self.width = width
+        Rectangle.number_of_instances += 1
 
     """ get_width function"""
 
@@ -72,3 +75,4 @@ class Rectangle:
 
     def __del__(self):
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
