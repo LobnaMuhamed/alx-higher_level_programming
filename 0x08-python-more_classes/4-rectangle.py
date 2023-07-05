@@ -64,3 +64,7 @@ class Rectangle:
             else:
                 result += '#' * self.__width + '\n'
         return result
+    """ function return a string representation of rectangle """
+
+    def __repr__(self):
+        return (f"Rectangle({self.__width}, {self.__height})")
