@@ -1,32 +1,28 @@
-The ``1-my_list`` module
-======================
+>>> MyList = __import__('1-my_list').MyList
 
-Using ``MyList``
--------------------
+>>> my_list = MyList()
 
-Importing the function from the module:
-        >>> MyList = __import__("1-my_list").MyList
+>>> print(my_list)
+[]
 
-Checking for module docstring:
-         >>> m = __import__("1-my_list").__doc__
-         >>> len(m) > 1
-         True
+>>> my_list.print_sorted()
+[]
 
-Checking for class docstring:
-         >>> c = __import__("1-my_list").MyList.__doc__
-         >>> len(c) > 1
-         True
+>>> my_list.append(10)
 
-Checking for method docstring:
-	 >>> mod = __import__("1-my_list").MyList.print_sorted.__doc__
-	 >>> len(mod) > 1
-	 True
+>>> my_list.append(11)
 
-Checking that MyList inherits from list:
-	 >>> issubclass(MyList, list)
-	 True
+>>> my_list.append(15)
 
-Checking for empty list:
-	 >>> l = MyList()
-	 >>> l.print_sorted()
-	 []
+>>> my_list.append(-1)
+
+>>> my_list.append(-5)
+
+>>> print(my_list)
+[10, 11, 15, -1, -5]
+
+>>> my_list.print_sorted()
+[-5, -1, 10, 11, 15]
+
+>>> print(my_list)
+[10, 11, 15, -1, -5]
