@@ -3,7 +3,6 @@
 """ Class MyInt """
 
 
-
 class MyInt(int):
     """ class Myint """
 
