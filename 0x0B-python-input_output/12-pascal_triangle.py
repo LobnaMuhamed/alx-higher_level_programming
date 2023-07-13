@@ -8,6 +8,12 @@ Pascal's traingle of n
 
 
 def pascal_triangle(n):
+    """
+    function that resturns a list of integers representing
+    Pascal's traingle of n
+
+    """
+
     matrix = []
     if n <= 0:
         return ([])
