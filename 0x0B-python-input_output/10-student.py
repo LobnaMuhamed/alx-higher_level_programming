@@ -21,7 +21,7 @@ class Student:
         returns a dictionary representation
 
         """
-        if not attrs:
+        if attrs is None:
             return self.__dict__
         else:
             result = {}
