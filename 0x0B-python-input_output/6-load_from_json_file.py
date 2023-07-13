@@ -13,8 +13,5 @@ def load_from_json_file(filename):
     Parameters:
         filename: file name
     """
-    try:
-        with open(filename, encoding="utf-8") as f:
-            return (json.load(f))
-    except (FileNotFoundError, json.JSONDecodeError):
-        return []
+    with open(filename, encoding="utf-8") as f:
+        return (json.load(f))
