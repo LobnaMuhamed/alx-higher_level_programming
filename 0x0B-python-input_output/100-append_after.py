@@ -16,8 +16,7 @@ def append_after(filename="", search_string="", new_string=""):
 
     with open(filename, encoding="utf-8") as f:
         lines = f.readlines()
-
-        if len(lines) == 1 and search_string in linesi[0]:
+        if len(lines) == 1 and search_string in lines[0]:
             lines.append(new_string)
         else:
             for index, line in enumerate(lines):
