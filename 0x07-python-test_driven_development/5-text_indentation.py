@@ -16,6 +16,7 @@ def text_indentation(text):
     beginning_of_line = True
     for i in text:
         if (i == "." or i == "?" or i == ":"):
+            print(i, end="")
             print("\n")
             beginning_of_line = True
         elif i == " " and beginning_of_line:
