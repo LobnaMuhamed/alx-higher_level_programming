@@ -13,7 +13,7 @@ def matrix_divided(matrix, div):
     str_err = "matrix must be a matrix (list of lists) of integers/floats"
     if type(div) not in [int, float]:
         raise TypeError("div must be a number")
-    if div == 0:
+    if div == 0 or div == float('inf'):
         raise ZeroDivisionError("division by zero")
     for row in matrix:
         new_row = []
