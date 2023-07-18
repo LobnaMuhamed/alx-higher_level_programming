@@ -1,0 +1,43 @@
+
+===========================
+How to Use 0-add_integer.py
+===========================
+
+this module defines a a function that adds 2 integers
+
+Usage
+====
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(6, 8)
+14
+
+>>> add_integer(-5, 7)
+2
+
+>>> add_integer(2.0, 9.0)
+11
+
+>>> add_integer(-12.0, 13.0)
+1
+
+>>> add_integer(True, False)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer("str", "chr")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(3, "4"):
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+
+>>> add_integer(-1, float('str'))
+Traceback (most recent call last):
+TypeError: b must be an integer
+
