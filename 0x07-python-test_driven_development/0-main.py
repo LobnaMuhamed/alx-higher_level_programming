@@ -5,9 +5,9 @@ print(add_integer(1, 2))
 print(add_integer(100, -2))
 print(add_integer(2))
 print(add_integer(100.3, -2))
-print(add_integer("str", 4))
-print(add_integer("str", "str"))
-print(add_integer(True, False))
+print(add_integer())
+print(add_integer("str"))
+
 try:
     print(add_integer(4, "School"))
 except Exception as e:
