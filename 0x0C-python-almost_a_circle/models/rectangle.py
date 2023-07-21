@@ -103,7 +103,11 @@ class Rectangle(Base):
         """
         r_width = self.__width
         r_height = self.__height
+        r_x = self.x
+        r_y = self.y
+        print("\n"*r_y, end="")
         for i in range(r_height):
+            print(" "*r_x, end="")
             for j in range(r_width):
                 print("#", end="")
             print("")
