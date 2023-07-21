@@ -37,3 +37,14 @@ class Square(Rectangle):
             raise TypeError("width must be an integer")
         self.width = value
         self.height = value
+
+    """ a public method that assigns attributes """
+    def update(self, *args, **kwargs):
+        """ a public method that assigns attributes """
+        attr_names = ["id", "size", "x", "y"]
+        if not args and kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+        else:
+            for i, arg in enumerate(args):
+                setattr(self, attr_names[i], arg)
