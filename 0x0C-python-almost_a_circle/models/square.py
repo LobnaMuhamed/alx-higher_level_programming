@@ -35,7 +35,7 @@ class Square(Rectangle):
         """ set size function """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if value <= 0:
-            raise TypeError("width must be > 0")
+        if value < 0:
+            raise TypeError("width must be => 0")
         self.width = value
         self.height = value
