@@ -48,3 +48,14 @@ class Square(Rectangle):
         else:
             for i, arg in enumerate(args):
                 setattr(self, attr_names[i], arg)
+
+    """ a public method that return the dictionary representaion """
+    def to_dictionary(self):
+
+        """ a public method that return the dictionary representaion """
+        return {
+                "id": self.id,
+                "x": self.x,
+                "size": self.size,
+                "y": self.y
+        }
