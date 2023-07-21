@@ -119,3 +119,13 @@ class Rectangle(Base):
         _y = self.y
         _x = self.x
         return (f"{str1}({self.id}) {_x}/{_y} - {self.width}/{self.height}")
+    """
+    a public method that assign an argument to each attribute
+    """
+    def update(self, *args):
+        """
+        a public method that assign an argument to each attribute
+        """
+        attr_names = ["id", "width", "height", "x", "y"]
+        for i, arg in enumerate(args):
+            setattr(self, attr_names[i], arg)
