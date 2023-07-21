@@ -19,4 +19,4 @@ class Square(Rectangle):
 
     def __str__(self):
         """ create __str__ method """
-        return(f"[Square] {self.id} {self.x}/{self.y} - {self.size}")
+        return(f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}")
