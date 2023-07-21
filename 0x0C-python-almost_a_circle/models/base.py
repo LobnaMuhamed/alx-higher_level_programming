@@ -44,3 +44,11 @@ class Base:
                 for obj in list_objs:
                     _list.append(obj.to_dictionary())
                 f.write(Base.to_json_string(_list))
+
+    """ a static method that returns the list of the JSON string """
+    @staticmethod
+    def from_json_string(json_string):
+        """ a static method that returns the list of the JSON string """
+        if not json_string or json_string is []:
+            return([])
+        return json.loads(json_string)
