@@ -132,3 +132,14 @@ class Rectangle(Base):
                 setattr(self, key, value)
         for i, arg in enumerate(args):
             setattr(self, attr_names[i], arg)
+
+    """ public method that returns the dictioray of Rectangle """
+    def to_dictionary(self):
+        """ public method that returns the dictioray of Rectangle """
+        return {
+            "x": self.x,
+            "y": self.y,
+            "id": self.id,
+            "height": self.height,
+            "width": self.width,
+        }
