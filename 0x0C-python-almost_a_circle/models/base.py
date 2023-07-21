@@ -3,6 +3,7 @@
 """
 The First Class Base:
 """
+import json
 
 
 class Base:
@@ -22,3 +23,9 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+    """ static method that returns the JSON string of list_dictionaries """
+    def to_json_string(list_dictionaries):
+        """ static method that returns the JSON string of list_dictionaries """
+        if not list_dictionaries or list_dictionaries is []:
+            return ("[]")
+        return json.dumps(list_dictionaries)
