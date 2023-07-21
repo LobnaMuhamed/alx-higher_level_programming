@@ -114,4 +114,4 @@ class Rectangle(Base):
         str1 = "[Rectangle] "
         _y = self.y
         _x = self.x
-        return (f"{str1}({self.id}) {_x}/{_y}- {self.width}/{self.height}")
+        return (f"{str1}({self.id}) {_x}/{_y} - {self.width}/{self.height}")
