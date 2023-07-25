@@ -114,3 +114,8 @@ class Base:
             instance = cls.create(**instance_data)
             instances_list.append(instance)
         return (instances_list)
+
+        """ a static method that opens a window and draw all instances """
+        @staticmethod
+        def draw(list_rectangles, list_squares):
+            pass
