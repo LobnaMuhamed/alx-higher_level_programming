@@ -4,6 +4,7 @@
 The First Class Base:
 """
 import json
+import csv
 
 
 class Base:
@@ -69,6 +70,38 @@ class Base:
     def load_from_file(cls):
         """ a class method that returns a list of instances """
         filename = cls.__name__ + ".json"
+
+        try:
+            with open(filename, encoding="utf-8") as f:
+                json_string = f.read()
+        except FileNotFoundError:
+            return []
+        data = cls.from_json_string(json_string)
+        instances_list = []
+        for instance_data in data:
+            instance = cls.create(**instance_data)
+            instances_list.append(instance)
+        return (instances_list)
+
+    """ a class method that serializes an deserialize in CSV """
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ a class method that write the JSON string """
+        filename = cls.__name__ + ".csv"
+        with open(filename, "w", encoding="utf-8") as f:
+            if not list_objs:
+                f.write("[]")
+            else:
+                _list = []
+                for obj in list_objs:
+                    _list.append(obj.to_dictionary())
+                f.write(Base.to_json_string(_list))
+
+    """ a class method that serializes an deserialize in CSV """
+    @classmethod
+    def load_from_file_csv(cls):
+        """ a class method that returns a list of instances """
+        filename = cls.__name__ + ".csv"
 
         try:
             with open(filename, encoding="utf-8") as f:
