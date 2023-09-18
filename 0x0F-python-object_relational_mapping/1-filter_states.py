@@ -14,7 +14,7 @@ if __name__ == '__main__':
                          passwd=sys.argv[2], db=sys.argv[3])
 
     cr = db.cursor()
-    cr.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id")
+    cr.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC")
 
     rows = cr.fetchall()
 
