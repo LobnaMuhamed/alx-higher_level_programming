@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-a script that lists the first State objects
+a script that lists all State objects
 
 from the database hbtn_0e_6_usa
 """
@@ -16,10 +16,9 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).first()
+    states = session.query(State).filter(State.name.like("%a%")).all()
 
-    if state is None:
-        print("Nothing")
-    else:
-        print("{}: {}".format(state.id, state.name))
+    for state in states:
+        print(f"{state.id}: {state.name}")
+
     session.close()
