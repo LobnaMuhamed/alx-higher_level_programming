@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-a script that lists all State objects
+a script that print State object with name passed as arg
 
 from the database hbtn_0e_6_usa
 """
