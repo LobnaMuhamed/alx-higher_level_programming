@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-script that takes your GitHub credentials (username and password) and uses the GitHub
+script that takes your GitHub credentials
+(username and password) and uses the GitHub
 """
 
 if __name__ == "__main__":
